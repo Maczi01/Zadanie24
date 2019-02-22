@@ -52,14 +52,8 @@ public class Computer implements Comparable<Computer>{
             if (this.ramMemory > other.ramMemory) {
                 return 1;
             } else if (this.ramMemory == other.ramMemory) {
-                if (this.name.compareTo(other.name) == 1) {
-                    return 1;
-                } else if (this.name.compareTo(other.name) == 0) {
-                    return 0;
-                }
-                return -1;
+                return this.name.compareTo(other.name);
             }
-            return -1;
         }
         return -1;
     }
